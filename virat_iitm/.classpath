@@ -35,16 +35,17 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/persistence-api-1.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-asyncclient-4.1.1/lib/httpasyncclient-cache-4.1.1.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/commons-codec-1.9.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/fluent-hc-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/httpclient-cache-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/httpclient-win-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/jna-4.1.0.jar"/>
-	<classpathentry kind="lib" path="/Users/apple/Desktop/httpcomponents-client-4.5.2/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/fluent-hc-4.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-cache-4.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpclient-win-4.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/way2sms-api-4.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
