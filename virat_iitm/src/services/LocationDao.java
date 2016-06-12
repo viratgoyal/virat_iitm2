@@ -85,6 +85,7 @@ public class LocationDao {
 	      String sql = "Select latitude,longitude from rider_coordinate " +"where (rider_id="+riderId+")";
 	      ResultSet rs = stmt.executeQuery(sql);
 	      while(rs.next());
+	      rs.previous();
 	      latitude = rs.getString(1);
 	      longitude = rs.getString(2);
 	      
