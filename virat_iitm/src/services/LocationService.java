@@ -41,7 +41,7 @@ public class LocationService {
 	@Path("/cutomerSms")
 	public String sendSMSToCustomer(@QueryParam("order_id") String orderId) throws IOException, SQLException {
 
-		lDao.getCustomerNumber(orderId);
+		String customerNumber = lDao.getCustomerNumber(orderId);
 		
 		String smsText = "Your order id "+orderId +"with Amazon is out for delivery. Please click the link folowing"
 				+ " if you are currently at location of expected delivery,for faster delivery "

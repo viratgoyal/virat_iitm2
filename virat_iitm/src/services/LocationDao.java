@@ -58,7 +58,7 @@ public class LocationDao {
 		String customerNumber="";
 		stmt = connection.createStatement();
 	      
-	      String sql = "Select cutomer_contact from order_details " +"where (order_id="+orderId+")";
+	      String sql = "Select customer_contact from order_details " +"where (order_id="+orderId+")";
 	      ResultSet rs = stmt.executeQuery(sql);
 	      rs.next();
 	      customerNumber = rs.getString(1);

@@ -5,6 +5,12 @@
    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
    id="WebApp_ID" version="3.0">
    <display-name>virat_iitm</display-name>
+   <welcome-file-list>  
+   		<welcome-file>home.jsp</welcome-file>  
+   		  
+   </welcome-file-list>  
+  
+   
    <servlet>
       <servlet-name>Jersey RESTful Application</servlet-name>
       <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
