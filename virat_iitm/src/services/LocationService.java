@@ -43,6 +43,10 @@ public class LocationService {
 
 		lDao.getCustomerNumber(orderId);
 		
+		String smsText = "Your order id "+orderId +"with Amazon is out for delivery. Please click the link folowing"
+				+ " if you are currently at location of expected delivery,for faster delivery "
+				+ "https://shadowsms.byethost32.com/getLoc.htm?orderId="+orderId;
+		
 		//add code to send sms to customer
 		
 		return "smsSentToCustomer";
@@ -55,19 +59,22 @@ public class LocationService {
 
 		System.out.println("service hit");
 		System.out.println(lat);
+		System.out.println(lon);
 		System.out.println(orderId);
 		
 		lDao.enterCustomerCordinates(lat, lon, orderId);
 		
 		sendSMSToRider(lat,lon,orderId);
 		
-		return "hello world";
+		return "you can exit window";
 
 	}
 	
 	public void sendSMSToRider(String lat,String lon,String orderId) throws SQLException
 	{
-		lDao.getRiderId(orderId);
+		String riderContact = lDao.getRiderContact(orderId);
+		String smsText = "Coordinates of delivery for order id:"+orderId+" are latitude: "+lat+" longitude: "+lon ;
+		
 		
 		//add code for sending sms to rider
 		

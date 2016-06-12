@@ -40,17 +40,17 @@ public class LocationDao {
 	      stmt.executeUpdate(sql);
 	}
 	
-	public String getRiderId(String orderId) throws SQLException
+	public String getRiderContact(String orderId) throws SQLException
 	{
-		String riderId="";
+		String riderContact="";
 		stmt = connection.createStatement();
 	      
-	      String sql = "Select rider_id from order_details " +"where (order_id="+orderId+")";
+	      String sql = "Select rider_contact from order_details " +"where (order_id="+orderId+")";
 	      ResultSet rs = stmt.executeQuery(sql);
 	      rs.next();
-	      riderId = rs.getString(1);
-	      System.out.println("riderId = "+riderId);
-	      return riderId;
+	      riderContact = rs.getString(1);
+	      System.out.println("riderContact = "+riderContact);
+	      return riderContact;
 	}
 
 	public String getCustomerNumber(String orderId) throws SQLException
