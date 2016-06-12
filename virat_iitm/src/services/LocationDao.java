@@ -52,6 +52,16 @@ public class LocationDao {
 	      System.out.println("riderContact = "+riderContact);
 	      return riderContact;
 	}
+	
+	public void enterRiderCordinates(String latitude, String longitude, String riderId) throws SQLException
+	{
+		
+		stmt = connection.createStatement();
+	      
+	      String sql = "INSERT INTO rider_coordinate " +
+	                   "VALUES ("+riderId+", '"+latitude+"', '"+longitude+"')";
+	      stmt.executeUpdate(sql);
+	}
 
 	public String getCustomerNumber(String orderId) throws SQLException
 	{
@@ -64,5 +74,20 @@ public class LocationDao {
 	      customerNumber = rs.getString(1);
 	      System.out.println("riderId = "+customerNumber);
 	      return customerNumber;
+	}
+	
+	public String getRiderCoordinates(String riderId) throws SQLException
+	{
+		String latitude="";
+		String longitude="";
+		stmt = connection.createStatement();
+	      
+	      String sql = "Select latitude,longitude from rider_coordinate " +"where (rider_id="+riderId+")";
+	      ResultSet rs = stmt.executeQuery(sql);
+	      while(rs.next());
+	      latitude = rs.getString(1);
+	      longitude = rs.getString(2);
+	      
+	      return latitude+" "+longitude;
 	}
 }

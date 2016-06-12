@@ -42,13 +42,13 @@ public class LocationService {
 	public String sendSMSToCustomer(@QueryParam("order_id") String orderId) throws IOException, SQLException {
 
 		String customerNumber = lDao.getCustomerNumber(orderId);
-		
-		String smsText = "Your order id "+orderId +"with Amazon is out for delivery. Please click the link folowing"
+
+		String smsText = "Your order id " + orderId + "with Amazon is out for delivery. Please click the link folowing"
 				+ " if you are currently at location of expected delivery,for faster delivery "
-				+ "https://shadowsms.byethost32.com/getLoc.htm?orderId="+orderId;
-		
-		//add code to send sms to customer
-		
+				+ "https://shadowsms.byethost32.com/getLoc.htm?orderId=" + orderId;
+
+		// add code to send sms to customer
+
 		return "smsSentToCustomer";
 	}
 
@@ -61,23 +61,50 @@ public class LocationService {
 		System.out.println(lat);
 		System.out.println(lon);
 		System.out.println(orderId);
-		
+
 		lDao.enterCustomerCordinates(lat, lon, orderId);
-		
-		sendSMSToRider(lat,lon,orderId);
-		
+
+		sendSMSToRider(lat, lon, orderId);
+
 		return "you can exit window";
 
 	}
-	
-	public void sendSMSToRider(String lat,String lon,String orderId) throws SQLException
-	{
+
+	@Path("/setCoordinatesOfRider")
+	@GET
+	public String setCoordinatesOfRider(@QueryParam("lat") String lat, @QueryParam("lon") String lon,
+			@QueryParam("RiderId") String riderId) throws IOException, SQLException {
+
+		System.out.println("service hit");
+		System.out.println(lat);
+		System.out.println(lon);
+		// System.out.println(orderId);
+
+		lDao.enterRiderCordinates(lat, lon, riderId);
+
+		sendSMSToRider(lat, lon, riderId);
+
+		return "";
+
+	}
+
+	@Path("/getCoordinatesOfRider")
+	@GET
+	public String setCoordinatesOfRider(@QueryParam("RiderId") String riderId) throws IOException, SQLException {
+
+		String coordinates = lDao.getRiderCoordinates(riderId);
+
+		return coordinates;
+
+	}
+
+	public void sendSMSToRider(String lat, String lon, String orderId) throws SQLException {
 		String riderContact = lDao.getRiderContact(orderId);
-		String smsText = "Coordinates of delivery for order id:"+orderId+" are latitude: "+lat+" longitude: "+lon ;
-		
-		
-		//add code for sending sms to rider
-		
+		String smsText = "Coordinates of delivery for order id:" + orderId + " are latitude: " + lat + " longitude: "
+				+ lon;
+
+		// add code for sending sms to rider
+
 		System.out.println("sms sent to rider");
 	}
 }
